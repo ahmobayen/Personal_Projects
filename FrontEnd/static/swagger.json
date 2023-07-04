@@ -1,0 +1,112 @@
+<<<<<<< HEAD
+{
+  "info": {
+    "description": "Api Image Processing",
+    "version": "1.0.0",
+    "title": "API Application",
+    "contact": {
+      "email": "a.h.mobayen@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "tags": [
+    {
+      "name": "Video Response",
+      "description": "Post Image Processing result in json format"
+    }
+  ],
+  "paths": {
+    "/api/video_feedback": {
+      "get": {
+        "tags": [
+          "Video Frame Display"
+        ],
+        "summary": "Display Video frame and detected objects in it.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "502": {
+            "description": "Bad Gateway."
+          }
+        }
+      }
+    },
+    "/api/video_history": {
+      "get": {
+        "tags": [
+          "Video Frame Display"
+        ],
+        "summary": "Display detected objects history in it.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "502": {
+            "description": "Bad Gateway."
+          }
+        }
+      }
+    }
+  },
+  "swagger": "2.0"
+=======
+{
+  "info": {
+    "description": "Api Image Processing",
+    "version": "1.0.0",
+    "title": "API Application",
+    "contact": {
+      "email": "a.h.mobayen@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "tags": [
+    {
+      "name": "Video Response",
+      "description": "Post Image Processing result in json format"
+    }
+  ],
+  "paths": {
+    "/api/video_feedback": {
+      "get": {
+        "tags": [
+          "Video Frame Display"
+        ],
+        "summary": "Display Video frame and detected objects in it.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "502": {
+            "description": "Bad Gateway."
+          }
+        }
+      }
+    },
+    "/api/video_history": {
+      "get": {
+        "tags": [
+          "Video Frame Display"
+        ],
+        "summary": "Display detected objects history in it.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "502": {
+            "description": "Bad Gateway."
+          }
+        }
+      }
+    }
+  },
+  "swagger": "2.0"
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+}

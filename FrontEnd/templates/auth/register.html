@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+<!-- application/templates/auth/register.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+    <div class="content-section">
+        <div class="container">
+            <h1>Register for an account</h1>
+            <br/>
+            {% if current_user.is_admin %}
+                <form action="" method="post" class="form" role="form">
+                    {{ form.csrf_token() }}
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">{{ wtf.form_field(form.email, class='form-control',
+                            placeholder='Email') }} </div>
+                            <div class="col-md-6">{{ wtf.form_field(form.username, class='form-control',
+                            placeholder='Username') }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">{{ wtf.form_field(form.first_name, class='form-control',
+                            placeholder='First Name') }} </div>
+                            <div class="col-md-6">{{ wtf.form_field(form.last_name, class='form-control',
+                            placeholder='Last Name') }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">{{ wtf.form_field(form.password, class='form-control',
+                            placeholder='Password') }}</div>
+                            <div class="col-md-6">{{ wtf.form_field(form.confirm_password, class='form-control',
+                            placeholder='Confirm Password') }} </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+=======
+<!-- application/templates/auth/register.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+    <div class="content-section">
+        <div class="container">
+            <h1>Register for an account</h1>
+            <br/>
+            {% if current_user.is_admin %}
+                <form action="" method="post" class="form" role="form">
+                    {{ form.csrf_token() }}
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">{{ wtf.form_field(form.email, class='form-control',
+                            placeholder='Email') }} </div>
+                            <div class="col-md-6">{{ wtf.form_field(form.username, class='form-control',
+                            placeholder='Username') }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">{{ wtf.form_field(form.first_name, class='form-control',
+                            placeholder='First Name') }} </div>
+                            <div class="col-md-6">{{ wtf.form_field(form.last_name, class='form-control',
+                            placeholder='Last Name') }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">{{ wtf.form_field(form.password, class='form-control',
+                            placeholder='Password') }}</div>
+                            <div class="col-md-6">{{ wtf.form_field(form.confirm_password, class='form-control',
+                            placeholder='Confirm Password') }} </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}

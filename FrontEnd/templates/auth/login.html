@@ -1,0 +1,77 @@
+<<<<<<< HEAD
+<!-- application/templates/auth/login.html -->
+
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center" align="center">
+                <br/>
+                {{ utils.flashed_messages() }}
+                <br/>
+                <div class="no-border">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">Login to your account</h3>
+                    </div>
+                </div>
+                <br/>
+                <form action="" method="post" class="form" role="form">
+                    {{ form.csrf_token() }}
+                    <div class="form-group">
+                        {{ wtf.form_field(form.email, class='form-control',
+                            placeholder='Email') }}
+                        {{ wtf.form_field(form.password, class='form-control',
+                            placeholder='Password') }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+{% endblock %}
+=======
+<!-- application/templates/auth/login.html -->
+
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center" align="center">
+                <br/>
+                {{ utils.flashed_messages() }}
+                <br/>
+                <div class="no-border">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">Login to your account</h3>
+                    </div>
+                </div>
+                <br/>
+                <form action="" method="post" class="form" role="form">
+                    {{ form.csrf_token() }}
+                    <div class="form-group">
+                        {{ wtf.form_field(form.email, class='form-control',
+                            placeholder='Email') }}
+                        {{ wtf.form_field(form.password, class='form-control',
+                            placeholder='Password') }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+{% endblock %}
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60

@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+<!-- application/templates/admin/roles/role.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_group %}
+        Add Role
+    {% else %}
+        Edit Role
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <div class="container">
+        {% if add_role %}
+            <h1>Add Role</h1>
+        {% else %}
+            <h1>Edit Role</h1>
+        {% endif %}
+        <br/>
+        {{ wtf.quick_form(form) }}
+    </div>
+=======
+<!-- application/templates/admin/roles/role.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_group %}
+        Add Role
+    {% else %}
+        Edit Role
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <div class="container">
+        {% if add_role %}
+            <h1>Add Role</h1>
+        {% else %}
+            <h1>Edit Role</h1>
+        {% endif %}
+        <br/>
+        {{ wtf.quick_form(form) }}
+    </div>
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}

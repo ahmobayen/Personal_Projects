@@ -1,0 +1,250 @@
+<<<<<<< HEAD
+<!-- application/templates/home/dashboard.html -->
+
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="{{ url_for('static' , filename='script/custom.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div id="Sidebar" class="w3-sidebar w3-bar-block w3-card w3-animate-right bg-dark"
+         style="display:none;right:0">
+        <div>
+            <button class="w3-bar-item w3-button font-weight-bold"
+                    onclick="sidebar_close()">Close &times;
+            </button>
+            <div class="dropdown-divider"></div>
+
+            <div id="SideBarSmartParking" class="pos-f-t">
+                <button class="w3-bar-item w3-button font-weight-normal" type="button"
+                        data-toggle="collapse"
+                        data-target="#SmartParking" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">smart Parking</span>
+                </button>
+
+                <div class="collapse w3-animate-right" id="SmartParking">
+                    <div class="bg-dark pr-4">
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Slot Initializer</a>
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Slot Detector</a>
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Plate Reader</a>
+                    </div>
+                </div>
+            </div>
+            <div id="SidebarDetectionSystem" class="pos-f-t">
+                <button class="w3-bar-item w3-button font-weight-normal " type="button"
+                        data-toggle="collapse"
+                        data-target="#DetectionSystem" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">Human detection</span>
+                </button>
+
+                <div class="collapse w3-animate-right" id="DetectionSystem">
+                    <div class="bg-dark pr-4">
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Control Access Initializer</a>
+
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Control Access</a>
+                    </div>
+                </div>
+            </div>
+            <div id="SidebarOCR" class="pos-f-t">
+                <button class="w3-bar-item w3-button font-weight-normal " type="button"
+                        data-toggle="collapse"
+                        data-target="#OCR" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">OCR</span>
+                </button>
+
+                <div class="collapse w3-animate-right" id="OCR">
+                    <div class="bg-dark pr-4">
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Character reading</a>
+
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Translate</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button font-weight-normal">API</a>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div class="row d-flex flex-row-reverse">
+            <div id="sideMenu" class="">
+                <button id="openNav" class=" navbar-dark bg-dark navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation" onclick="sidebar_open()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div id="container" class="col-12" align="center">
+                <div class="container-fluid">
+                    <div class="row align-content-center">
+                        <div id="video_section" class="col-md-7 align-content-center" align="center">
+                            <h1 style="text-align:center;">Video Feed</h1>
+                            <hr class="intro-divider">
+                            <img id="video_feed" class="img-fluid rounded mx-auto d-block"
+                                 src="{{ url_for('home.video_feed') }}" alt="Error: Contact your administrator">
+                        </div>
+                        <div id="table_section" class="col-md-5" align="center">
+                            <h1 style="text-align:center;">previous events</h1>
+                            <hr class="intro-divider">
+                            <table id="event_table"
+                                   class="table table-striped table-hover table-borderless table-responsive-sm"
+                                   align="center">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Direction</th>
+                                    <th scope="col">Time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for detected_item in table_output %}
+                                    <tr class="bg-dark">
+                                        <th scope="row">{{ loop.index }}</th>
+                                        <td>{{ detected_item.subject }}</td>
+                                        <td>{{ detected_item.direction }}</td>
+                                        <td>{{ detected_item.time }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+=======
+<!-- application/templates/home/dashboard.html -->
+
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="{{ url_for('static' , filename='script/custom.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div id="Sidebar" class="w3-sidebar w3-bar-block w3-card w3-animate-right bg-dark"
+         style="display:none;right:0">
+        <div>
+            <button class="w3-bar-item w3-button font-weight-bold"
+                    onclick="sidebar_close()">Close &times;
+            </button>
+            <div class="dropdown-divider"></div>
+
+            <div id="SideBarSmartParking" class="pos-f-t">
+                <button class="w3-bar-item w3-button font-weight-normal" type="button"
+                        data-toggle="collapse"
+                        data-target="#SmartParking" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">smart Parking</span>
+                </button>
+
+                <div class="collapse w3-animate-right" id="SmartParking">
+                    <div class="bg-dark pr-4">
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Slot Initializer</a>
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Slot Detector</a>
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Plate Reader</a>
+                    </div>
+                </div>
+            </div>
+            <div id="SidebarDetectionSystem" class="pos-f-t">
+                <button class="w3-bar-item w3-button font-weight-normal " type="button"
+                        data-toggle="collapse"
+                        data-target="#DetectionSystem" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">Human detection</span>
+                </button>
+
+                <div class="collapse w3-animate-right" id="DetectionSystem">
+                    <div class="bg-dark pr-4">
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Control Access Initializer</a>
+
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Control Access</a>
+                    </div>
+                </div>
+            </div>
+            <div id="SidebarOCR" class="pos-f-t">
+                <button class="w3-bar-item w3-button font-weight-normal " type="button"
+                        data-toggle="collapse"
+                        data-target="#OCR" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">OCR</span>
+                </button>
+
+                <div class="collapse w3-animate-right" id="OCR">
+                    <div class="bg-dark pr-4">
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Character reading</a>
+
+                        <a href="#" class="w3-bar-item w3-button font-weight-light">Translate</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button font-weight-normal">API</a>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div class="row d-flex flex-row-reverse">
+            <div id="sideMenu" class="">
+                <button id="openNav" class=" navbar-dark bg-dark navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation" onclick="sidebar_open()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div id="container" class="col-12" align="center">
+                <div class="container-fluid">
+                    <div class="row align-content-center">
+                        <div id="video_section" class="col-md-7 align-content-center" align="center">
+                            <h1 style="text-align:center;">Video Feed</h1>
+                            <hr class="intro-divider">
+                            <img id="video_feed" class="img-fluid rounded mx-auto d-block"
+                                 src="{{ url_for('home.video_feed') }}" alt="Error: Contact your administrator">
+                        </div>
+                        <div id="table_section" class="col-md-5" align="center">
+                            <h1 style="text-align:center;">previous events</h1>
+                            <hr class="intro-divider">
+                            <table id="event_table"
+                                   class="table table-striped table-hover table-borderless table-responsive-sm"
+                                   align="center">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Direction</th>
+                                    <th scope="col">Time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for detected_item in table_output %}
+                                    <tr class="bg-dark">
+                                        <th scope="row">{{ loop.index }}</th>
+                                        <td>{{ detected_item.subject }}</td>
+                                        <td>{{ detected_item.direction }}</td>
+                                        <td>{{ detected_item.time }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}

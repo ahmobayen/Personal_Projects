@@ -1,0 +1,13 @@
+What Should I DO:
+    1- API: ZONE + Number of available Slots + number of total cars.
+        status: first iteration is finished
+    2- Thermal Process: Create image processing by colour.
+        status: New
+    3- Thermal API: there is no official API in order that maybe i could write one.
+        status: New
+    4- Process Optimization: Use OpenCL or CUDA.
+        status: New ->required linux for compiling(OpenCL can not be install from win)
+    5- Plate Detector: read a fully working plate reader.
+        status: in progress
+    6- coordinate_generator: bug fix -> wont work on browser.
+        status: New

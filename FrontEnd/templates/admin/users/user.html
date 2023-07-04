@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+<!-- application/templates/admin/users/user.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Assign User{% endblock %}
+{% block body %}
+    <h1> Assign Groups and Roles </h1>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <br/>
+            <p>Select a group and role to assign to </p>
+            <span class="alert-link">{{ user.first_name }} {{ user.last_name }}</span>
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+        <div class="col-4"></div>
+    </div>
+=======
+<!-- application/templates/admin/users/user.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Assign User{% endblock %}
+{% block body %}
+    <h1> Assign Groups and Roles </h1>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <br/>
+            <p>Select a group and role to assign to </p>
+            <span class="alert-link">{{ user.first_name }} {{ user.last_name }}</span>
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+        <div class="col-4"></div>
+    </div>
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}

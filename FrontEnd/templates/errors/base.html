@@ -1,0 +1,38 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block body %}
+    <div class="text-monospace ">
+    <br>
+        <div class="container justify-content-center border rounded bg-warning text-dark">
+            <br/>
+            {% block error_section %}
+            {% endblock %}
+            <hr class="intro-divider">
+            <a href="{{ url_for('home.homepage') }}" class="btn btn-default btn-lg">
+                <i class="fas fa-home text-dark"></i>
+                <span class="text-dark">Home</span>
+            </a>
+        </div>
+    </div>
+
+=======
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block body %}
+    <div class="text-monospace ">
+    <br>
+        <div class="container justify-content-center border rounded bg-warning text-dark">
+            <br/>
+            {% block error_section %}
+            {% endblock %}
+            <hr class="intro-divider">
+            <a href="{{ url_for('home.homepage') }}" class="btn btn-default btn-lg">
+                <i class="fas fa-home text-dark"></i>
+                <span class="text-dark">Home</span>
+            </a>
+        </div>
+    </div>
+
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}

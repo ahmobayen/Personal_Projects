@@ -1,0 +1,180 @@
+<<<<<<< HEAD
+<!-- app/templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ title }} | Raahbar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}">
+
+    <script src="{{ url_for('static' , filename='script/jquery-3.3.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static' , filename='script/popper.min.js') }}"></script>
+    <script src="{{ url_for('static' , filename='script/bootstrap.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/d64f38aa1f.js" crossorigin="anonymous"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark row bg-dark fixed-top">
+    <div class="col-4">
+        <div class="navbar-brand d-flex float-left">
+            <img src="{{ url_for('static' , filename='img/Brand.png') }}" width="30" height="30"
+                 class="d-inline-block align-top" alt="">
+            <a class=" text-white pl-1 d-none d-sm-block" href="#"> Raahbar Informatics Services</a>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <div class="d-flex float-right ">
+            <div id="navbarSupportedContent" class="collapse navbar-collapse pr-2">
+                <ul class="navbar-nav mr-auto d-flex flex-row-reverse">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home.homepage') }}">Home<span class="
+                           sr-only">(current)  </span></a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hi, {{ current_user.username }}!
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('home.dashboard') }}">Dashboard</a>
+                                {% if current_user.is_admin %}
+                                    <a class="dropdown-item"
+                                       href="{{ url_for('admin.list_groups') }}">Groups</a>
+                                    <a class="dropdown-item" href="{{ url_for('admin.list_roles') }}">Roles</a>
+                                    <a class="dropdown-item" href="{{ url_for('admin.list_users') }}">Users</a>
+                                    <a class="dropdown-item" href="{{ url_for('admin.list_settings') }}">Settings</a>
+
+                                    <a class="dropdown-item" href="{{ url_for('auth.register') }}">Register</a>
+                                {% else %}
+                                {% endif %}
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item center" href="{{ url_for('auth.logout') }}">Log out!</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+<div class="intro-header container-fluid justify-content-center">
+    <br><br>
+    {% block body %}
+    {% endblock %}
+</div>
+
+<footer class="bg-secondary">
+    <div class="container-fluid">
+        <span class="fas fa-copyright">Copyright © 2021. All Rights Reserved</span>
+    </div>
+</footer>
+
+</body>
+=======
+<!-- app/templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ title }} | Raahbar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}">
+
+    <script src="{{ url_for('static' , filename='script/jquery-3.3.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static' , filename='script/popper.min.js') }}"></script>
+    <script src="{{ url_for('static' , filename='script/bootstrap.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/d64f38aa1f.js" crossorigin="anonymous"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark row bg-dark fixed-top">
+    <div class="col-4">
+        <div class="navbar-brand d-flex float-left">
+            <img src="{{ url_for('static' , filename='img/Brand.png') }}" width="30" height="30"
+                 class="d-inline-block align-top" alt="">
+            <a class=" text-white pl-1 d-none d-sm-block" href="#"> Raahbar Informatics Services</a>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <div class="d-flex float-right ">
+            <div id="navbarSupportedContent" class="collapse navbar-collapse pr-2">
+                <ul class="navbar-nav mr-auto d-flex flex-row-reverse">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home.homepage') }}">Home<span class="
+                           sr-only">(current)  </span></a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hi, {{ current_user.username }}!
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('home.dashboard') }}">Dashboard</a>
+                                {% if current_user.is_admin %}
+                                    <a class="dropdown-item"
+                                       href="{{ url_for('admin.list_groups') }}">Groups</a>
+                                    <a class="dropdown-item" href="{{ url_for('admin.list_roles') }}">Roles</a>
+                                    <a class="dropdown-item" href="{{ url_for('admin.list_users') }}">Users</a>
+                                    <a class="dropdown-item" href="{{ url_for('admin.list_settings') }}">Settings</a>
+
+                                    <a class="dropdown-item" href="{{ url_for('auth.register') }}">Register</a>
+                                {% else %}
+                                {% endif %}
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item center" href="{{ url_for('auth.logout') }}">Log out!</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+<div class="intro-header container-fluid justify-content-center">
+    <br><br>
+    {% block body %}
+    {% endblock %}
+</div>
+
+<footer class="bg-secondary">
+    <div class="container-fluid">
+        <span class="fas fa-copyright">Copyright © 2021. All Rights Reserved</span>
+    </div>
+</footer>
+
+</body>
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+</html>

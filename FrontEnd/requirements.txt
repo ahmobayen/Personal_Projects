@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+flask~=1.1.2
+flask_login
+email_validator
+
+flask_sqlalchemy
+flask_migrate
+flask_script
+flask_swagger_ui
+Flask-WTF
+flask-bootstrap
+
+
+alembic~=1.5.8
+SQLAlchemy~=1.4.7
+WTForms~=2.3.3
+=======
+flask~=1.1.2
+flask_login
+email_validator
+
+flask_sqlalchemy
+flask_migrate
+flask_script
+flask_swagger_ui
+Flask-WTF
+flask-bootstrap
+
+
+alembic~=1.5.8
+SQLAlchemy~=1.4.7
+WTForms~=2.3.3
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+Werkzeug~=1.0.1

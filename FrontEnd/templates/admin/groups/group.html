@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+<!-- app/templates/admin/groups/group.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_group %}
+        Add Group
+    {% else %}
+        Edit Group
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            {% if add_group %}
+                <h1>Add Group</h1>
+            {% else %}
+                <h1>Edit Group</h1>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+        <div class="col-4"></div>
+    </div>
+=======
+<!-- app/templates/admin/groups/group.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_group %}
+        Add Group
+    {% else %}
+        Edit Group
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            {% if add_group %}
+                <h1>Add Group</h1>
+            {% else %}
+                <h1>Edit Group</h1>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+        <div class="col-4"></div>
+    </div>
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}

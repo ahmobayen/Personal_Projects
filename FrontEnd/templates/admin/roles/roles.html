@@ -1,0 +1,126 @@
+<<<<<<< HEAD
+<!-- application/templates/admin/roles/roles.html -->
+
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Roles{% endblock %}
+{% block body %}
+    <div class="container">
+        <br/>
+            {{ utils.flashed_messages() }}
+            <br/>
+            <h1 style="text-align:center;">Roles</h1>
+            <hr class="intro-divider">
+
+            {% if roles %}
+                <div class="container">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th width="15%"> Name</th>
+                            <th width="40%"> Description</th>
+                            <th width="15%"> User Count</th>
+                            <th width="15%"> Edit</th>
+                            <th width="15%"> Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-dark">
+                        {% for role in roles %}
+                            <tr>
+                                <td> {{ role.name }} </td>
+                                <td> {{ role.description }} </td>
+                                <td>
+                                    {% if role.users %}
+                                        {{ role.users.count() }}
+                                    {% else %}
+                                        0
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('admin.edit_role', id=role.id) }}">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('admin.delete_role', id=role.id) }}">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <h3> No roles have been added. </h3>
+                <hr class="intro-divider">
+            {% endif %}
+            <a href="{{ url_for('admin.add_role') }}" class="btn btn-default btn-lg">
+                <i class="fas fa-plus"></i>
+                Add Role
+            </a>
+    </div>
+=======
+<!-- application/templates/admin/roles/roles.html -->
+
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Roles{% endblock %}
+{% block body %}
+    <div class="container">
+        <br/>
+            {{ utils.flashed_messages() }}
+            <br/>
+            <h1 style="text-align:center;">Roles</h1>
+            <hr class="intro-divider">
+
+            {% if roles %}
+                <div class="container">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th width="15%"> Name</th>
+                            <th width="40%"> Description</th>
+                            <th width="15%"> User Count</th>
+                            <th width="15%"> Edit</th>
+                            <th width="15%"> Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-dark">
+                        {% for role in roles %}
+                            <tr>
+                                <td> {{ role.name }} </td>
+                                <td> {{ role.description }} </td>
+                                <td>
+                                    {% if role.users %}
+                                        {{ role.users.count() }}
+                                    {% else %}
+                                        0
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('admin.edit_role', id=role.id) }}">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('admin.delete_role', id=role.id) }}">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <h3> No roles have been added. </h3>
+                <hr class="intro-divider">
+            {% endif %}
+            <a href="{{ url_for('admin.add_role') }}" class="btn btn-default btn-lg">
+                <i class="fas fa-plus"></i>
+                Add Role
+            </a>
+    </div>
+>>>>>>> 270786ff41f19b6230c41b27351db543564b1c60
+{% endblock %}
